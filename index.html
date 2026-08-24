@@ -30,6 +30,13 @@
     nav ul li {
       padding: 20px;
     }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+    nav ul li a:hover{
+      color : rgb(119, 119, 199)
+    }
 
     .Left {
       font-size: 1.5rem;
@@ -56,6 +63,9 @@
     .purple {
       color:rgba(179, 27, 235, 0.895);
     }
+    #element {
+      color : rgb(137, 50, 148)
+    }
   </style>
 </head>
 
@@ -65,11 +75,11 @@
       <div class="Left"> Divyam's Portfolio</div>
       <div class="Right">
         <ul>
-          <li> Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Contact Me</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
         </ul>
       </div>
     </nav>
@@ -81,13 +91,21 @@
     <div class="leftsection">
       Hi, My name is <span class="purple">Divyam</span> 
       <div> and I am a passionate</div>
-      <div>Web Developer</div>
+       <span id="element"></span>
     </div>
     <div class="rightsection">
       <img src="developer.png.png" alt="">
     </div>
     </section>
   </main>
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+   <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Software Engineer' , 'Problem Solver', 'Tech Enthusiast.'],
+      typeSpeed: 50
+    });
+  </script>
 </body>
 
 </html>
